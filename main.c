@@ -1,19 +1,26 @@
-//this is the main function, pretty obvious but i'm marking it anyway -oriolenix aka Indigo
- #include <stdio.h>
- #include <espeak-ng/speak_lib.h>
-//speak-ng is important
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <espeak-ng/speak_lib.h>
+
 int main() {
-        //told I must activate this before any espeak synthing
-        ESPEAK_API int espeak_Initialize(espeak_AUDIO_OUTPUT output, int buflength, const char *path, int options);
+    espeak_Initialize(AUDIO_OUTPUT_PLAYBACK, 0, NULL, 0);
 
+    char input[20];
+    int talking;
 
-	int talking;
+    printf("Search for question here number here: ");
+    fgets(input, sizeof(input), stdin);
 
-	printf("search for question here number here: ");
-	scanf("%d", &talking);
-       //this is not working because im incompetent and can't figure out the syntax, fix later 
-	printf("\nnumber: %d", talking);
-        espeak_Synth("%d", talking);
-	return 0;
+    talking = atoi(input);
 
-    }
+    printf("\nNumber: %d\n", talking);
+    char buffer[20];
+    snprintf(buffer, sizeof(buffer), "%d", talking);
+
+    espeak_Synth(buffer, sizeof(buffer), 0, 0, 0, espeakCHARS_AUTO, NULL, NULL);
+
+    espeak_Synchronize();
+
+    return 0;
+}
