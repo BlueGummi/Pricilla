@@ -1,0 +1,22 @@
+1000 debian
+1001 ubuntu
+1002 ubuntunosnap
+1003 pikaos
+// this list is not at all exhaustive, these are what come to mind as requiring different data, update with new distros as needed
+2000 fedora
+2001 rhel
+2002 alma
+3000 susetwsr
+3001 suseleap
+4000 arch 
+4001 manjaro
+5000 void
+6000 kiss
+7000 slack
+7001 porteus
+8000 gentoo
+9000 alpine
+0100 puppy
+1100 nixos
+1200 clear 
+//the main purpose of adding so many distros at start is to standardize practice for future use, if you have any questions, don't be afraid to ask
