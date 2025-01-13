@@ -5,8 +5,8 @@ This has literally no code yet, and therefore there is nothing to add or audit, 
 
 
 TODO LIST
-[ ] make list with numbers correlating to answers (e.g."1000 0001 use sudo apt update and sudo apt upgrade to upgrade your deb packages")
-[ ] leave some numbers specifically for system specific answers (1000 for debian based, as an example)
+[X] make list with numbers correlating to answers (e.g."1000 0001 use sudo apt update and sudo apt upgrade to upgrade your deb packages")
+[X] leave some numbers specifically for system specific answers (1000 for debian based, as an example)
 [ ] allow user to call number in list, and recieve the data (e.g. input number: 1000 0001 /N use sudo apt update and sudo apt upgrade to upgrade your deb packages)
 [ ] impliment voice-ng calls to 'say' answer to question
 [ ] make list with questions correlating to answer numbers. MUST ALLOW MULTIPLE QUESTIONS TO GET THE SAME ANSWER (e.g. 0001 how do I update, 0001 what command is update)
